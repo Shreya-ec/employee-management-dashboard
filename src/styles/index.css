@@ -1,0 +1,32 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Poppins, system-ui, sans-serif;
+  background: var(--bg-gradient);
+  color: #1f2937;
+}
+
+.layout {
+  display: flex;
+  height: 100vh;
+}
+
+.content {
+  flex: 1;
+  padding-left: 10px;
+}
+
+/* CSS variables */
+:root {
+  --primary: #4A5BD9;
+  --black: #1d1d1d;
+  --danger: #a14141;
+  --bg-gray: #ffffff52;
+  --bg-white: #FDFFFF;
+  --bg-gradient: linear-gradient(#ECEDF4 0%, #A9B6D4 100%);
+  --bg-blue: #A9B6D4;
+  --bg-blue-light: #a9b6d44d;
+}

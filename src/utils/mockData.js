@@ -1,0 +1,16 @@
+// Mock user data - replace with API call later
+export const mockUsers = [
+  { id: 1, employeeId: 'EMP001', fullName: 'Rajesh Kumar', gender: 'Male', dob: '1990-05-15', state: 'Maharashtra', status: 'Active', profileImage: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=faces' },
+  { id: 2, employeeId: 'EMP002', fullName: 'Priya Sharma', gender: 'Female', dob: '1992-08-22', state: 'Delhi', status: 'Active', profileImage: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop&crop=faces' },
+  { id: 3, employeeId: 'EMP003', fullName: 'Amit Patel', gender: 'Male', dob: '1988-03-10', state: 'Gujarat', status: 'Active', profileImage: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&h=200&fit=crop&crop=faces' },
+  { id: 4, employeeId: 'EMP004', fullName: 'Anjali Reddy', gender: 'Female', dob: '1995-11-05', state: 'Telangana', status: 'Inactive', profileImage: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&h=200&fit=crop&crop=faces' },
+  { id: 5, employeeId: 'EMP005', fullName: 'Vikram Singh', gender: 'Male', dob: '1991-07-18', state: 'Punjab', status: 'Active', profileImage: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=200&fit=crop&crop=faces' },
+  { id: 6, employeeId: 'EMP006', fullName: 'Sneha Menon', gender: 'Female', dob: '1989-12-25', state: 'Kerala', status: 'Active', profileImage: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=200&h=200&fit=crop&crop=faces' },
+  { id: 7, employeeId: 'EMP007', fullName: 'Rahul Desai', gender: 'Male', dob: '1993-02-14', state: 'Karnataka', status: 'Inactive', profileImage: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=200&h=200&fit=crop&crop=faces' },
+  { id: 8, employeeId: 'EMP008', fullName: 'Meera Iyer', gender: 'Female', dob: '1994-09-30', state: 'Tamil Nadu', status: 'Active', profileImage: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=200&h=200&fit=crop&crop=faces' },
+  { id: 9, employeeId: 'EMP009', fullName: 'Arjun Nair', gender: 'Male', dob: '1987-04-12', state: 'Kerala', status: 'Active', profileImage: 'https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?w=200&h=200&fit=crop&crop=faces' },
+  { id: 10, employeeId: 'EMP010', fullName: 'Kavita Joshi', gender: 'Female', dob: '1996-06-20', state: 'Uttarakhand', status: 'Active', profileImage: 'https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=200&h=200&fit=crop&crop=faces' },
+  { id: 11, employeeId: 'EMP011', fullName: 'Suresh Rao', gender: 'Male', dob: '1992-10-08', state: 'Andhra Pradesh', status: 'Inactive', profileImage: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=200&h=200&fit=crop&crop=faces&seed=11' },
+  { id: 12, employeeId: 'EMP012', fullName: 'Divya Agarwal', gender: 'Female', dob: '1990-01-28', state: 'Rajasthan', status: 'Active', profileImage: 'https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?w=200&h=200&fit=crop&crop=faces' },
+  { id: 13, employeeId: 'EMP013', fullName: 'Karan Malhotra', gender: 'Male', dob: '1989-07-15', state: 'Haryana', status: 'Active', profileImage: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=200&h=200&fit=crop&crop=faces' },
+]
