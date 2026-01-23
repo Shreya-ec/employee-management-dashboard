@@ -5,6 +5,28 @@
     padding: 30px;
 }
 
+.left-dash {
+    display: flex;
+    align-items: start;
+    gap: 12px;
+}
+
+.sidebar-ham{
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    cursor: pointer;
+
+    display: none;
+}
+
+.sidebar-ham:hover {
+    background-color: var(--bg-gray);
+}
+
 .header-greeting h2 {
     margin: 0;
     font-size: 24px;
@@ -70,4 +92,11 @@
     display: flex;
     flex-direction: column;
     gap: 24px;
+}
+
+
+@media (max-width: 992px) {
+  .sidebar-ham {
+    display: flex;
+  }
 }

@@ -1,11 +1,13 @@
-import { createContext, useState, useEffect } from 'react'
+import { createContext, useState, useEffect } from 'react';
+import { mockUsers } from '../utils/mockData';
 
 export const AuthContext = createContext(null)
 
 export const AuthProvider = ({ children }) => {
   const [isAuthenticated, setIsAuthenticated] = useState(false)
   const [user, setUser] = useState(null)
-  const [loading, setLoading] = useState(true)
+  const [loading, setLoading] = useState(true);
+  const [employees, setEmployees] = useState(mockUsers);
 
   useEffect(() => {
     // Check if user is already logged in (e.g., from localStorage)
@@ -20,8 +22,6 @@ export const AuthProvider = ({ children }) => {
   }, [])
 
   const login = async (email, password) => {
-    // TODO: Replace with actual API call
-    // For now, simple mock authentication
     if (email && password) {
       const userData = {
         email,
@@ -37,6 +37,10 @@ export const AuthProvider = ({ children }) => {
     return { success: false, error: 'Invalid credentials' }
   }
 
+  const updateEmployees = (updatedEmployees) => {
+    setEmployees(updatedEmployees);
+  };
+
   const logout = () => {
     setIsAuthenticated(false)
     setUser(null)
@@ -46,6 +50,8 @@ export const AuthProvider = ({ children }) => {
   const value = {
     isAuthenticated,
     user,
+    employees,
+    updateEmployees,
     loading,
     login,
     logout

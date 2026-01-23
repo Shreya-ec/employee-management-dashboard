@@ -1,12 +1,13 @@
 import { useAuth } from '../../../hooks/useAuth'
+import { RiMenu2Fill } from "react-icons/ri";
 import './Topbar.css'
 
 function Topbar() {
     const { user } = useAuth()
-    
+
     const getGreeting = () => {
         const hour = new Date().getHours()
-        
+
         if (hour >= 5 && hour < 12) {
             return 'Good morning'
         } else if (hour >= 12 && hour < 17) {
@@ -17,12 +18,17 @@ function Topbar() {
             return 'Good night'
         }
     }
-    
+
     return (
         <header className="dashboard-header">
-            <div className="header-greeting">
-                <h2>{getGreeting()}, {user?.name || 'Maria'}</h2>
-                <p>long time no see</p>
+            <div className="left-dash">
+                <div className="sidebar-ham">
+                    <RiMenu2Fill size={20} />
+                </div>
+                <div className="header-greeting">
+                    <h2>{getGreeting()}, {user?.name || 'Maria'}</h2>
+                    <p>long time no see</p>
+                </div>
             </div>
             <div className="header-profile">
                 <div className="profile-avatar-header">

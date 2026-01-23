@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   gap: 24px;
-  height: calc(100vh - 110px);
+  height: calc(100vh - 120px);
   overflow-y: auto;
   padding: 0 30px 60px 30px;
 }
@@ -516,6 +516,10 @@
 }
 
 /* Responsive Design */
+@media (max-width: 992px) {
+  
+}
+
 @media (max-width: 768px) {
   .users-controls {
     flex-direction: column;
@@ -570,6 +574,7 @@
     width: 100%;
   }
 }
+
 
 /* Delete Confirmation Modal Styles */
 .delete-modal-content {

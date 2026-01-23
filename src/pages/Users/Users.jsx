@@ -1,8 +1,9 @@
-import { useState, useMemo } from 'react'
+import { useState, useMemo, useEffect } from 'react'
 import './Users.css'
-import { mockUsers } from '../../utils/mockData'
+import { useAuth } from '../../hooks/useAuth';
 import { FaSearch, FaEdit, FaTrash, FaPrint, FaPlus, FaTimes, FaChevronLeft, FaChevronRight } from 'react-icons/fa'
 import { printTable } from '../../components/helpers/print'
+
 
 // Indian states list
 const INDIAN_STATES = [
@@ -15,10 +16,12 @@ const INDIAN_STATES = [
 ]
 
 function Users() {
+  const { employees, updateEmployees } = useAuth();
+  const mockUsers = employees;
   const [searchTerm, setSearchTerm] = useState('')
   const [statusFilter, setStatusFilter] = useState('All')
   const [genderFilter, setGenderFilter] = useState('All')
-  const [users, setUsers] = useState(mockUsers)
+  const [users, setUsers] = useState(mockUsers);
   const [isModalOpen, setIsModalOpen] = useState(false)
   const [editingUser, setEditingUser] = useState(null)
   const [formData, setFormData] = useState({
@@ -35,6 +38,10 @@ function Users() {
   const [userToDelete, setUserToDelete] = useState(null)
   const [currentPage, setCurrentPage] = useState(1)
   const itemsPerPage = 10
+
+  useEffect(()=>{
+    updateEmployees(users)
+  }, [users])
 
   // Get unique values for filters
   const statuses = ['All', ...new Set(mockUsers.map(user => user.status))]
@@ -309,10 +316,6 @@ function Users() {
   return (
 
     <main className="users-main">
-      {/* <div className="users-header-section">
-          <h2>Employees Management</h2>
-          <p>Manage your employees and their details</p>
-        </div> */}
 
       {/* Search and Filters Panel */}
       <div className="users-controls-panel">
@@ -407,6 +410,7 @@ function Users() {
                         type="checkbox"
                         checked={user.status === 'Active'}
                         onChange={() => toggleStatus(user.id)}
+                        title={user.status === 'Active'? 'Deactivate':'Activate'}
                       />
                       <span className="toggle-slider"></span>
                     </label>

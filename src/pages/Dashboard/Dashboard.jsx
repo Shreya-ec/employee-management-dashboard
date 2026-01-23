@@ -1,20 +1,25 @@
 import './Dashboard.css'
-import { mockUsers } from '../../utils/mockData'
+import { useAuth } from '../../hooks/useAuth'
 
 const Dashboard = () => {
-  // Calculate metrics from mockUsers data
-  const totalEmployees = mockUsers.length
-  const activeEmployees = mockUsers.filter(user => user.status === 'Active').length
-  const inactiveEmployees = mockUsers.filter(user => user.status === 'Inactive').length
+  const { employees } = useAuth();
+  // Calculate metrics from employees data
+  const totalEmployees = employees.length
+  const activeEmployees = employees.filter(user => user.status === 'Active').length
+  const inactiveEmployees = employees.filter(user => user.status === 'Inactive').length
   
   // Calculate employees by gender for diversity metrics
-  const maleEmployees = mockUsers.filter(user => user.gender === 'Male').length
+  const maleEmployees = employees.filter(user => user.gender === 'Male').length
+  const femaleEmployees = employees.filter(user => user.gender === 'Female').length
+
 
   const metrics = [
     { title: 'Total employees', value: totalEmployees.toString() },
     { title: 'Active employees', value: activeEmployees.toString() },
     { title: 'Inactive employees', value: inactiveEmployees.toString() },
     { title: 'Male employees', value: maleEmployees.toString() },
+    { title: 'Female employees', value: femaleEmployees.toString() },
+
   ]
 
   return (

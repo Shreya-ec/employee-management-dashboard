@@ -4,7 +4,7 @@
 
 body {
   margin: 0;
-  font-family: Poppins, system-ui, sans-serif;
+  font-family: 'Poppins', system-ui, sans-serif;
   background: var(--bg-gradient);
   color: #1f2937;
 }
