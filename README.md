@@ -13,7 +13,7 @@ Employee Management Dashboard built with React.
 
 
 ## Tech Stack
-- React
+- ReactJs
 - React Router
 - LocalStorage
 

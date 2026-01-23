@@ -10,20 +10,26 @@ export const printTable = (data, formatDate, title = 'Table Data', columns = [])
   const printWindow = window.open('', '_blank')
   
   // Generate table rows
-  const tableRows = data.map(item => {
+  const tableRows = data.map((item, index) => {
     const cells = columns.map(col => {
-      let value = item[col.key]
+      let value;
       
-      // Format date if the column is a date field
-      if (col.type === 'date' && formatDate && value) {
-        value = formatDate(value)
+      if (col.key === 'serialNumber') {
+        value = index + 1;
+      } else {
+        value = item[col.key];
+        
+        // Format date if the column is a date field
+        if (col.type === 'date' && formatDate && value) {
+          value = formatDate(value);
+        }
       }
       
-      return `<td>${value || ''}</td>`
-    }).join('')
+      return `<td>${value || ''}</td>`;
+    }).join('');
     
-    return `<tr>${cells}</tr>`
-  }).join('')
+    return `<tr>${cells}</tr>`;
+  }).join('');
 
   // Generate table headers
   const tableHeaders = columns.map(col => `<th>${col.label}</th>`).join('')

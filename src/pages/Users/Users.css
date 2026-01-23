@@ -129,6 +129,11 @@
   color: var(--black);
   height: 50px;
 }
+.header-1{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
 
 .users-table-header-row th {
   color: var(--bg-white);

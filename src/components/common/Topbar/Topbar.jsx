@@ -26,7 +26,7 @@ function Topbar() {
                     <RiMenu2Fill size={20} />
                 </div>
                 <div className="header-greeting">
-                    <h2>{getGreeting()}, {user?.name || 'Maria'}</h2>
+                    <h2>{getGreeting()}, {user?.name || 'User'}</h2>
                     <p>long time no see</p>
                 </div>
             </div>
